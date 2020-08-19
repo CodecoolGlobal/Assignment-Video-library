@@ -7,7 +7,9 @@ let data = fs.readFileSync('data.csv')
     .toString() // convert Buffer to string
     .split('\n') // split string to lines
     .map(e => e.trim()) // remove white spaces for each line
-    .map(e => e.split(';').map(e => e.trim())); // split each line to array
+    .map(e => e.split(',').map(e => e.trim())); // split each line to array
+
+data.pop();
 
 let newData = [];
 
@@ -15,14 +17,15 @@ router.get('/', function (req, res, next) {
     /* GET users listing. */
     newData = shuffle(data).slice(0, 6);
     res.render('showStories', {data: newData});
+    console.log(data);
 });
 
 router.post('/', function (req, res, next) {
         /* GET users listing. */
         newData = [];
-        const searchOptions = [req.body.searchByTitle,req.body.searchByTag];
+        const searchOptions = [req.body.searchByTitle,req.body.searchByTag,req.body.searchByUploader, req.body.searchByEmail];
         for (let i = 0; i <= data.length - 1; i++) {
-            if (data[i][1] === searchOptions[0] || data[i][3] === searchOptions[1]) {
+            if (data[i][1] === searchOptions[0] || data[i][3] === searchOptions[1] || data[i][4] === searchOptions[2] || data[i][5] === searchOptions[3]) {
                 newData.push(data[i]);
             }
         }
