@@ -1,0 +1,21 @@
+<div class="content">
+    <h1 style="text-align: center">Add User Story</h1>
+    <div class="form">
+        <form action="/addStory" method="POST">
+            <label for="url">URL</label><br>
+            <input type="url" name="url" id="url" required><br>
+            <label for="title">TITLE</label><br>
+            <input type="text" name="title" minlength="3" id="title" required><br>
+            <label for="description">DESCRIPTION</label><br>
+            <textarea name="description" id="description" rows="10" cols="20" required></textarea><br>
+            <label for="tag">TAG</label><br>
+            <input name="tag" id="tag" type="text" pattern="[#]{}"><br>
+            <label for="upload">UPLOADED BY</label><br>
+            <input name="upload" minlength="3" id="upload" type="text"><br>
+            <label for="email">EMAIL</label><br>
+            <input name="email" id="email" type="email"><br>
+            <p><button type="submit">SUBMIT</button></p>
+        </form>
+        <p><a href="/showStories">SHOW STORIES</a></p>
+    </div>
+</div>
