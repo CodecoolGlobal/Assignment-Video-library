@@ -20,6 +20,12 @@ app.use('/showStoriesByTitle', storiesRouter);
 
 app.use('/showStoriesByTag', storiesRouter);
 
+app.use('/showStoriesByTag', storiesRouter);
+
+app.use('/showStoriesByUploader', storiesRouter);
+
+app.use('/showStoriesByEmail', storiesRouter);
+
 app.use('/addStoryPanel', addRouterPanel);
 
 app.use('/addStory', addRouterPanel);

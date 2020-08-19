@@ -15,6 +15,7 @@ router.get('/', function (req, res, next) {
     /* GET users listing. */
     newData = shuffle(data).slice(0, 6);
     res.render('showStories', {data: newData});
+    console.log(data[0][5]);
 });
 
 router.post('/', function (req, res, next) {
