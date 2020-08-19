@@ -20,9 +20,9 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
         /* GET users listing. */
         newData = [];
-        const searchOptions = [req.body.searchByTitle,req.body.searchByTag];
+        const searchOptions = [req.body.searchByTitle,req.body.searchByTag,req.body.searchByUploader, req.body.searchByEmail];
         for (let i = 0; i <= data.length - 1; i++) {
-            if (data[i][1] === searchOptions[0] || data[i][3] === searchOptions[1]) {
+            if (data[i][1] === searchOptions[0] || data[i][3] === searchOptions[1] || data[i][4] === searchOptions[2] || data[i][5] === searchOptions[3]) {
                 newData.push(data[i]);
             }
         }

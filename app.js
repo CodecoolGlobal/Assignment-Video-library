@@ -10,6 +10,19 @@ var addRouterPanel = require('./routes/addStoryPanel');
 
 var app = express();
 
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use("/public",express.static(__dirname + "/public"));
+
+app.use('/showStories', storiesRouter);
+
+app.use('/showStoriesByTitle', storiesRouter);
+
+app.use('/showStoriesByTag', storiesRouter);
+
+app.use('/addStoryPanel', addRouterPanel);
+
+app.use('/addStory', addRouterPanel);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
