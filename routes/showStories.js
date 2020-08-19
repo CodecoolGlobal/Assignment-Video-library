@@ -17,6 +17,19 @@ router.get('/', function (req, res, next) {
     res.render('showStories', {data: newData});
 });
 
+router.post('/', function (req, res, next) {
+        /* GET users listing. */
+        newData = [];
+        const searchOptions = [req.body.searchByTitle,req.body.searchByTag];
+        for (let i = 0; i <= data.length - 1; i++) {
+            if (data[i][1] === searchOptions[0] || data[i][3] === searchOptions[1]) {
+                newData.push(data[i]);
+            }
+        }
+        res.render('showStories', {data: newData});
+    }
+);
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
