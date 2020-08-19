@@ -16,17 +16,11 @@ can test your API with Postman.
 Story title User story description Acceptance criteria
 ```
 ```
-Search
-videos
-randomly
-```
-```
+Search videos randomly:
 As a User,
 I want to go to main page,
 So that I see 5 random
 videos.
-```
-```
 Given that there are any number
 ({0..n}) of saved Video data,
 When I open the website (/),
@@ -34,20 +28,13 @@ Then ensure I see a list of 5
 randomly generated videos.
 ```
 ```
-Search
-videos by
-title and
-description
-```
-```
+Search videos by title and description:
 As a User,
 I want to search videos by
 title and description,
 So that I get 5 videos
 containing the provided
 phrase.
-```
-```
 Given that there are any number
 ({0..n}) of saved Video data,
 When I open the website (/),
@@ -56,32 +43,22 @@ which after submitting will list 5
 videos containing given subtext.
 ```
 ```
-Search
-videos by tag
-```
-```
+Search videos by tag:
 As a User,
 I want to search videos by
 selecting tag,
 So I get 5 suitable videos.
-```
-```
 When I open the website (/),
 And I click any tag link,
 Then ensure I see 5 videos
 connected with that tag.
 ```
 ```
-Add new
-video url
-```
-```
+Add new video url:
 As a User,
 I want to be able to add a
 new video,
 So that I can extend the data
-```
-```
 When I open the website (/),
 And I click the "Add New Video" link
 Then ensure I see a form where I can
@@ -92,23 +69,10 @@ Update
 existing
 ```
 ```
-As a User,
-I want to be able to change
-```
-```
-When I open the website (/),
-And I click the Video,
-```
-
-```
-video
-```
-```
+As a User, I want to be able to change:
 details of an existing video,
 So that I can keep them up-
 to-date with the current info.
-```
-```
 Then ensure I see a form prefilled
 with the details of the Video,
 And when I submit the changed data,
