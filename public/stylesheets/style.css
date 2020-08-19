@@ -21,7 +21,7 @@ input {
     border: none;
     outline: none;
     /*padding: 14px 16px;*/
-    background-color: rgba(0, 34, 255, 0.3);
+    background-color: rgb(0, 13, 106);
     color: #91e3ff;
     font-size: 1.1em;
     font-weight: bolder;
@@ -32,7 +32,7 @@ input {
 }
 
 .dropdown .dropbtn:hover {
-    background-color: rgba(0, 34, 255, 0.3);
+    /*background-color: rgba(0, 34, 255, 0.3);*/
 }
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -85,6 +85,16 @@ input {
     /*margin: 2% 10% 0 10%;*/
 }
 
+.formPanel {
+    margin-top: 5em;
+    text-align: center;
+}
+
+button {
+    margin-right: 1em;
+    border-radius: 10%;
+}
+
 * {
     box-sizing: border-box;
     font-family: Raleway;
@@ -119,7 +129,7 @@ html, body {
 }
 
 .main-nav li {
-    padding: 0 4%;
+    padding: 0 1em;
 }
 
 .nav a:hover {
