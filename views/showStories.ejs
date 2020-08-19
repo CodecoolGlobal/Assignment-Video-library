@@ -1,0 +1,37 @@
+<%- include('partials/header'); %>
+
+<div class="container">
+
+    <!--    <h1>SHOW ALL USERS!</h1>-->
+
+<!--    <form action="/showStories" method="POST">-->
+    <!--        <label for="searchByTitle">SEARCH VIDEOS BY TITLE AND DESCRIPTION</label><br>-->
+    <!--        <input type="text" name="searchByTitle" id="searchByTitle">-->
+    <!--        &lt;!&ndash;    <label for="searchByDescription">SEARCH VIDEOS BY DESCRIPTION</label><br>&ndash;&gt;-->
+    <!--        &lt;!&ndash;    <input type="text" name="searchByDescription" id="searchByDescription">&ndash;&gt;-->
+    <!--        <button type="submit">SEARCH</button>-->
+    <!--        &lt;!&ndash;    <label for="searchByTag">SEARCH VIDEOS BY TAG</label><br>&ndash;&gt;-->
+    <!--        &lt;!&ndash;    <input type="text" name="searchByTag" id="searchByTag"><br>&ndash;&gt;-->
+    <!--    </form>-->
+    <!--    <br>-->
+
+    <% const headers = ['ID', 'TITLE', 'DESCRIPTION', 'TAG', 'UPLOADED BY', 'CONTACT'] %>
+    <% for (let i = 0; i < data.length; i++) { %>
+        <div class="segment">
+            <iframe class="video" width="420" height="315" src=<%= data[i][0] %> frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p><strong><%= headers[0]%>: </strong> <%=i%></p>
+
+            <div class="text">
+                <% for (let j = 1; j < 6; j++) { %>
+                    <p><strong><%= headers[j]%>: </strong> <%=data[i][j] %></p>
+                <% } %>
+            </div>
+        </div>
+</div>
+<% } %>
+
+<p><a href="/addStoryPanel">ADDSTORY</a></p>
+
+<%- include ('partials/footer'); %>

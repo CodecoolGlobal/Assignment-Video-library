@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+</head>
+<body>
+<header class="main-header">
+    <nav class="nav main-nav">
+        <ul>
+            <li><a href="/showStories">HOME</a></li>
+            <li><a href="/addStoryPanel">ADD</a></li>
+            <li class="dropdown">
+                <a>SEARCH BY:<i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <form action="/showStoriesByTitle" method="POST">
+                        <input type="text" name="searchByTitle" id="searchByTitle" placeholder="TITLE">
+                    </form>
+                    <form action="/showStoriesByTag" method="POST">
+                        <input type="text" name="searchByTag" id="searchByTag" placeholder="TAG">
+                    </form>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <h1 class="introduction">CUTE MICRO PIG VIDEOS LIBRARY</h1>
+</header>
